@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
@@ -12,15 +13,50 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button button12, button24;
-    private ConstraintLayout parent_syd, parent_nyc, parent_tokyo, parent_hk, parent_cairo, parent_italy, parent_jkt, parent_ldn, parent_madrid, parent_seoul;
-    private ImageView iv_syd, iv_nyc, iv_tokyo, iv_hk, iv_cairo, iv_italy, iv_jkt, iv_ldn, iv_madrid, iv_seoul;
-    private TextView tv_syd, tv_nyc, tv_tokyo, tv_hk, tv_cairo, tv_italy, tv_jkt, tv_ldn, tv_madrid, tv_seoul;
-    private TextClock time_syd, time_nyc, time_tokyo, time_hk, time_cairo, time_italy, time_jkt, time_ldn, time_madrid, time_seoul;
+    private ConstraintLayout parent_syd, parent_nyc, parent_tokyo, parent_cairo, parent_hk, parent_italy, parent_jkt, parent_ldn, parent_madrid, parent_seoul;
+    private ImageView iv_syd, iv_nyc, iv_tokyo, iv_cairo, iv_hk, iv_italy, iv_jkt, iv_ldn, iv_madrid, iv_seoul;
+    private TextView tv_syd, tv_nyc, tv_tokyo, tv_cairo, tv_hk, tv_italy, tv_jkt, tv_ldn, tv_madrid, tv_seoul;
+    private TextClock time_syd, time_nyc, time_tokyo, time_cairo, time_hk, time_italy, time_jkt, time_ldn, time_madrid, time_seoul;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //buttons to trigger 12-hour format or 24-hour format
+        button12 = (Button) findViewById(R.id.button12);
+        button12.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                time_syd.setFormat12Hour("hh:mm:ss a");
+                time_nyc.setFormat12Hour("hh:mm:ss a");
+                time_tokyo.setFormat12Hour("hh:mm:ss a");
+                time_cairo.setFormat12Hour("hh:mm:ss a");
+                time_hk.setFormat12Hour("hh:mm:ss a");
+                time_italy.setFormat12Hour("hh:mm:ss a");
+                time_jkt.setFormat12Hour("hh:mm:ss a");
+                time_ldn.setFormat12Hour("hh:mm:ss a");
+                time_madrid.setFormat12Hour("hh:mm:ss a");
+                time_seoul.setFormat12Hour("hh:mm:ss a");
+            }
+        });
+
+        button24 = (Button) findViewById(R.id.button24);
+        button24.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                time_syd.setFormat12Hour("HH:mm:ss a");
+                time_nyc.setFormat12Hour("HH:mm:ss a");
+                time_tokyo.setFormat12Hour("HH:mm:ss a");
+                time_cairo.setFormat12Hour("HH:mm:ss a");
+                time_hk.setFormat12Hour("HH:mm:ss a");
+                time_italy.setFormat12Hour("HH:mm:ss a");
+                time_jkt.setFormat12Hour("HH:mm:ss a");
+                time_ldn.setFormat12Hour("HH:mm:ss a");
+                time_madrid.setFormat12Hour("HH:mm:ss a");
+                time_seoul.setFormat12Hour("HH:mm:ss a");
+            }
+        });
 
         //SYDNEY, AUSTRALIA
         parent_syd = (ConstraintLayout) findViewById(R.id.parent_syd);
@@ -44,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         time_nyc = (TextClock) parent_nyc.findViewById(R.id.city_time);
         time_nyc.setTimeZone("America/New_York");
 
-        //TOKYO
+        //TOKYO, JAPAN
         parent_tokyo = findViewById(R.id.parent_tokyo);
         tv_tokyo = (TextView) parent_tokyo.findViewById(R.id.city_name);
         tv_tokyo.setText("Tokyo");
