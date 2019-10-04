@@ -120,17 +120,6 @@ public class MainActivity extends AppCompatActivity {
         time_hk = parent_hk.findViewById(R.id.city_time);
         time_hk.setTimeZone("Asia/Hong_Kong");
 
-        //ROME, ITALY
-        parent_rome = findViewById(R.id.parent_rome);
-        tv_rome = parent_rome.findViewById(R.id.city_name);
-        tv_rome.setText(getResources().getString(R.string.Rome));
-
-        iv_rome = parent_rome.findViewById(R.id.city_img);
-        iv_rome.setImageResource(R.drawable.italy);
-
-        time_rome = parent_rome.findViewById(R.id.city_time);
-        time_rome.setTimeZone("Europe/Rome");
-
         //JAKARTA, INDONESIA
         parent_jkt = findViewById(R.id.parent_jkt);
         tv_jkt = parent_jkt.findViewById(R.id.city_name);
@@ -163,6 +152,17 @@ public class MainActivity extends AppCompatActivity {
 
         time_madrid = parent_madrid.findViewById(R.id.city_time);
         time_madrid.setTimeZone("Europe/Madrid");
+
+        //ROME, ITALY
+        parent_rome = findViewById(R.id.parent_rome);
+        tv_rome = parent_rome.findViewById(R.id.city_name);
+        tv_rome.setText(getResources().getString(R.string.Rome));
+
+        iv_rome = parent_rome.findViewById(R.id.city_img);
+        iv_rome.setImageResource(R.drawable.italy);
+
+        time_rome = parent_rome.findViewById(R.id.city_time);
+        time_rome.setTimeZone("Europe/Rome");
 
         //SEOUL, SOUTH KOREA
         parent_seoul = findViewById(R.id.parent_seoul);
