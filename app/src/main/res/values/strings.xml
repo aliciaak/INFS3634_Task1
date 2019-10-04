@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">World Clock</string>
+
+    <string name="twelve">12 Hours</string>
+    <string name="twenty_four">24 Hours</string>
+
+    <string name="Sydney">Sydney</string>
+    <string name="New_York">New York</string>
+    <string name="Tokyo">Tokyo</string>
+    <string name="Cairo">Cairo</string>
+    <string name="Hong_Kong">Hong Kong</string>
+    <string name="Rome">Rome</string>
+    <string name="Jakarta">Jakarta</string>
+    <string name="London">London</string>
+    <string name="Madrid">Madrid</string>
+    <string name="Seoul">Seoul</string>
+
 </resources>
